@@ -1,0 +1,64 @@
+.button,
+.submit,
+.cancel,
+.inactive,
+.boolean {
+    display: grid;
+    border-radius: 5em;
+    padding: 0.5em 1em;
+    border-width: 0.5px;
+    border-style: solid;
+}
+
+.button:hover,
+.button:focus,
+.submit:hover,
+.submit:focus,
+.cancel:hover,
+.cancel:focus,
+.boolean:hover,
+.boolean:focus {
+    cursor: pointer;
+}
+
+.button {
+    border-color: rgb(var(--rgb-grey),0.5);
+    background: var(--);
+    color: var(--light);
+}
+
+.button:hover,
+.button:focus {
+    border: 0.1em solid rgb(var(--rgb-grey));
+}
+
+.submit {
+    border-color: var(--highlight);
+}
+
+.submit:hover,
+.submit:focus {
+    border: 0.1em solid black;
+}
+
+.cancel {
+
+}
+
+.cancel:hover,
+.cancel:focus {
+
+}
+
+.inactive {
+    opacity: 0.5;
+}
+
+.boolean {
+
+}
+
+.boolean:hover,
+.boolean:focus {
+
+}

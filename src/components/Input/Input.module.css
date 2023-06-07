@@ -1,0 +1,27 @@
+.item {
+    display: grid;
+    gap: 1em;
+    margin: 0.5em 1em;
+}
+
+.label,
+.input {
+    display: inherit;
+}
+
+.label {
+    width: 20ch;
+}
+
+.input {
+    border-radius: 4em;
+    border-width: 0.4px;
+    padding: 0.5em 1em;
+}
+
+.input:hover,
+.input:focus {
+    cursor: pointer;
+    border-width: 1px;
+    background-color: rgb();
+}

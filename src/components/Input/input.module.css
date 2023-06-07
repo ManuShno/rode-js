@@ -1,0 +1,156 @@
+.input,
+.label, 
+.field,
+.button {
+    display: grid;
+}
+
+.input {
+    grid-template-rows: auto;
+    grid-template-columns: auto 2fr 7ch;
+    grid-template-areas: 'label field button';
+    margin: 0.5em;
+    position: relative;
+}
+
+.input:has(input[type='file']) {
+    grid-template-columns: auto minmax(0, 2fr);
+    grid-template-areas: 'label field';
+}
+
+.label {
+    grid-area: label;
+    align-items: center;
+    justify-items: right;
+    padding: 0 1em;
+    width: 20ch;
+}
+
+.field {
+    grid-area: field;
+    padding: 0.7em 1em;
+    min-width: 35ch;
+    width: 100%;
+    max-width: 75ch;
+    grid-template-columns: 1fr auto;
+}
+
+.displayText {
+    margin: 0.25em 1em;
+    padding: 0;
+    max-width: 60ch;
+}
+
+textarea.field,
+input.field,
+button.field {
+    border: 0.5px solid rgb(var(--rgb-grey),0.25);
+    border-radius: 2em;
+}
+
+button.field {
+    width: 30ch;
+    margin: auto 1em;
+    background: rgb(var(--rgb-grey),0.05);
+}
+
+button.field:hover {
+    cursor: pointer;
+    background: rgb(var(--rgb-yellow), 0.25);
+}
+
+.selected {
+    background: rgb(var(--rgb-blue), 0.4) !important;
+}
+
+.field[type='range'] {
+    padding: 0;
+    margin: auto;
+    -webkit-appearance: none;
+    height: 0.5em;
+    background: rgb(var(--rgb-grey),0.05);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.field[type='range']:hover {
+    opacity: 1;
+}
+
+.field[type='range']::-webkit-slider-thumb,
+.field[type='range']::-moz-range-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.2em;
+    height: 1.2em;
+    background: rgb(var(--rgb-blue));
+    cursor: pointer;
+    border-radius: 1em;
+}
+
+.field[type='file'] {
+    border: none;
+    padding: 0;
+}
+
+.button,
+.icon {
+    grid-area: button;
+    place-self: center;
+    place-content: center;
+}
+
+.button {
+    height: 60%;
+    font-size: 70%;
+    place-self: center;
+    place-content: center;
+    width: 75%;
+    color: rgb(var(--rgb-grey),1);
+}
+
+button.button {
+    border-radius: 2em;
+    padding-inline: 0.25em;
+    margin-inline: 0.25em;
+    border: 0.1px solid rgb(var(--rgb-grey),0.25);
+    background: rgb(var(--rgb-grey),0.1);
+    color: rgb(var(--rgb-grey),1);
+}
+
+.icon {
+    max-height: 2em;
+    max-width: 2em;
+    opacity: 0.5;
+}
+
+.icon:hover {
+    cursor: pointer;
+    opacity: 0.75;
+}
+
+.input svg {
+    max-height: 1em;
+    max-width: 1em;
+    position: absolute;
+    z-index: 2;
+    align-self: center;
+    justify-self: right;
+    right: 0.8em;
+    fill: rgb(var(--rgb-red),1);
+}
+
+.input:last-child {
+    margin-bottom: 1.5em;
+}
+
+.error {
+    border: 0.5px solid rgb(var(--rgb-red),0.75);
+    background: rgb(var(--rgb-red),0.1);
+}
+
+.dropdown {
+    position: fixed;
+}

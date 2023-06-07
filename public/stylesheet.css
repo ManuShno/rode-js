@@ -1,0 +1,96 @@
+:root {
+    /* rode default variables */
+    --rgb-white:            255,255,255;
+    --rgb-black:            0,0,0;
+    --rgb-grey:             3,3,3;
+    --rgb-red:              215,21,58;
+    --rgb-yellow:           227,178,60;
+    --rgb-blue:             141,167,190;
+    --rgb-slate:            79,87,101;
+    /* ui variables */
+    --rgb-error:            255,36,0;
+    --rgb-warning:          255,191,0;
+    --rgb-success:          31,198,0;
+    --rgb-frame:            211,211,211;
+    --rgb-frame-outline:    128,128,128;
+}
+
+body {
+    background:             rgb(var(--rgb-white),1);
+    color:                  rgb(var(--rgb-grey),0.75);
+}
+
+[class*=theme-] {
+    background:             var(--background);
+    color:                  var(--text);
+    fill:                   var(--primary);
+    stroke:                 var(--primary);
+}
+
+.theme-rode {
+    --background:           rgb(var(--rgb-white),1);
+    --heading:              rgb(var(--rgb-grey),0.75);
+    --body:                 rgb(var(--rgb-grey),0.75);
+    --border:               rgb(var(--rgb-grey),0.5);
+    --selected:             rgb(var(--rgb-blue),0.5);
+}
+  
+.theme-rode-inverted {
+    --background:           rgb(var(--rgb-grey),0.75);
+    --heading:              var(--body);
+    --body:                 rgb(var(--rgb-white),1);
+    --border:               rgb(var(--rgb-white),0.5);
+}
+  
+.theme-rode-inverted-light {
+    --background:           rgb(var(--rgb-grey),0.1);
+    --heading:              var(--body);
+    --body:                 rgb(var(--rgb-grey),1);
+    --border:               rgb(var(--rgb-grey),0.75);
+}
+  
+.theme-error {
+    --background:           rgb(var(--rgb-white),0);
+    --heading:              var(--body);
+    --body:                 rgb(var(--rgb-red),1);
+    --border:               rgb(var(--rgb-red),0.5);
+}
+
+[class*=theme-seslhd] {
+    --rgb-seslhd-red:       215,21,58;
+    --rgb-seslhd-blue:      0,38,100;
+    --rgb-seslhd-blue1:     10,124,185;
+    --rgb-seslhd-blue2:     132,189,220;
+    --rgb-seslhd-blue3:     0,171,230;
+    --rgb-seslhd-grey:      79,79,79;
+    --rgb-seslhd-purple:    117,47,138;
+    --rgb-seslhd-green:     120,177,67;
+    --rgb-seslhd-orange:    255,127,47;
+    --rgb-seslhd-yellow:    249,190,0;
+}
+
+.theme-seslhd-ce {
+    --primary:              rgb(var(--rgb-seslhd-red),1);
+}
+.theme-seslhd-pow {
+    --rgb-pow:              128,147,178;
+    --primary:              rgb(var(--rgb-pow),1);
+}
+
+/* 
+--tsh:                  rgb(var(--rgb-seslhd-orange),1);
+--sgh:                  rgb(var(--rgb-seslhd-green),1);
+--seslhd-legal:         rgb(188,216,161,1);
+--sseh:                 rgb(var(--rgb-seslhd-blue1),1);
+--nsw-orgtiss:          rgb(133,190,220,1);
+--seslhd-mh:            rgb(108,75,117,1);
+--selshd-pach:          rgb(186,151,197,1);
+--seslhd-pop:           rgb(var(--rgb-seslhd-yellow),1);
+--seslhd-ict:           rgb(100,100,100,1);
+--seslhd-research:      rgb(167,167,167,1);
+--garrawarra:           rgb(var(--rgb-seslhd-blue2),1);
+--seslhd-operations:    rgb(194,222,238,1);
+--seslhd-finance:       rgb(var(--rgb-seslhd-blue3),1);
+--seslhd-nursing:       rgb(255,191,151,1);
+--seslhd-medical:       rgb(var(--rgb-seslhd-blue),1);
+*/

@@ -1,15 +1,22 @@
 import React from 'react'
 
-declare type ButtonProps = {
+import styles from './Button.module.css'
+
+export declare type ButtonProps = {
     label: string
+    type?: string
+    onClick: (e: React.MouseEvent) => void
 }
 
-const Button = (props: ButtonProps) => {
+export const Button = ({
+    label,
+    type = 'button',
+    onClick = e => console.log(e.target),
+}: ButtonProps) => {
     return (
-        <button>
-            {props.label}
+        <button className={styles[type]} 
+            onClick={onClick}>
+            {label}
         </button>
     )
 }
-
-export default Button
